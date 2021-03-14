@@ -1,5 +1,5 @@
 # 简单易懂的小刻也能读懂的扒源教程
-谨以此片献给各位热心贡献自己网络的源man，如有其他技巧可提issue
+谨以此献给各位热心贡献自己网络的源man，如有其他技巧可提issue  
 是自己21年开始成为某个组的剪辑man以及经历了虹fes洗礼后总结的东西，有帮上忙就太好了
 
 ## 一般路过油管视频
@@ -7,6 +7,7 @@
 - 神器，无需多言，设置比较麻烦，建议自己写个批处理储存常用参数
 - 配合ffmpeg可以只截取一小段
 - ~~还可以扒会限，具体方法不会描述，自己研究~~
+- 以下代码仅供参考，自行替换%%的内容
 ```DOS
 youtube-dl -g -f best %link% >> x.txt
 set /p videolink=<x.txt
@@ -17,6 +18,7 @@ ffmpeg -ss %starttime% -i "%videolink%" -t %duration% -c:v libx264 -s 1920x1080 
 ### streamlink
 - 设置比较简单
 - 录制出来是.ts，体积很小，可以用软件转码
+- 以下代码仅供参考，自行替换%%的内容
 ```DOS
 streamlink "%link%" best --output %videoname%.ts
 ```
