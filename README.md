@@ -36,3 +36,7 @@ streamlink "%link%" best --output %videoname%.ts
 - 将其输出的命令行复制到cmd即可
 - 小技巧：在你指定的文件目录的地址栏，全选，替换为cmd，回车，会在你指定的目录中启动cmd
 - ~~就不用一点点cd了~~
+
+## Twitch
+### Twitch Leecher
+- 自带GUI，和普通的软件操作差不多
