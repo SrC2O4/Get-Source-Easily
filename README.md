@@ -1,4 +1,7 @@
 # 简单易懂的小刻也能读懂的扒源教程
+谨以此片献给各位热心贡献自己网络的源man，如有其他技巧可提issue
+是自己21年开始成为某个组的剪辑man以及经历了虹fes洗礼后总结的东西，有帮上忙就太好了
+
 ## 一般路过油管视频
 ### youtube-dl
 - 神器，无需多言，设置比较麻烦，建议自己写个批处理储存常用参数
@@ -10,7 +13,7 @@ set /p videolink=<x.txt
 ffmpeg -ss %starttime% -i "%videolink%" -t %duration% -c:v libx264 -s 1920x1080 outputvideo.mp4
 ```
 
-## 实时录制直播
+## 实时录制油管直播
 ### streamlink
 - 设置比较简单
 - 录制出来是.ts，体积很小，可以用软件转码
