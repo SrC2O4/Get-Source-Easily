@@ -13,6 +13,9 @@ youtube-dl -g -f best %link% >> x.txt
 set /p videolink=<x.txt
 ffmpeg -ss %starttime% -i "%videolink%" -t %duration% -c:v libx264 -s 1920x1080 outputvideo.mp4
 ```
+#### 一些edge case
+- 如果你推直播窗太长，油管还没来得及转换hls为mp4，youtube-dl会自动采用ffmpeg下m3u8
+油管hls转mp4速度和直播时长成反比例关系，确信。如果没装好ffmpeg的话需要用 --ffmpeg-location指定位置，而且ffmpeg的原理是先抓取碎片再整合~~很慢……~~
 
 ## 实时录制油管直播
 ### streamlink
