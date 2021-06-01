@@ -43,5 +43,11 @@ streamlink "%link%" best --output %videoname%.ts
 - ~~就不用一点点cd了~~
 
 ## Twitch
-### Twitch Leecher
+### 实时直播录制，用于对付不留档
+#### youtube-dl
+- 经群友提醒有一些人喜欢搞不留档t台
+- 可以用youtube-dl下载m3u8流
+- 经测试只能从脚本执行的时候起，可能是个问题
+### 扒档 
+#### Twitch Leecher
 - 自带GUI，和普通的软件操作差不多
