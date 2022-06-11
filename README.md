@@ -3,19 +3,18 @@
 是自己21年开始成为某个组的剪辑man以及经历了虹fes洗礼后总结的东西，有帮上忙就太好了
 
 ## 一般路过油管视频
-### youtube-dl
+
+### Youtube-dl已寄，yt-dlp当道
+- 油管为了卖会员不择手段……
 - 神器，无需多言，设置比较麻烦，建议自己写个批处理储存常用参数
-- 配合ffmpeg可以只截取一小段
-- ~~还可以扒会限，具体方法不会描述，自己研究~~
-- 以下代码仅供参考，自行替换%%的内容
+- 以下代码仅供参考（下载封面以及最好格式的音频+视频并合并），自行替换%%的内容
 ```DOS
-youtube-dl -g -f best %link% >> x.txt
-set /p videolink=<x.txt
-ffmpeg -ss %starttime% -i "%videolink%" -t %duration% -c:v libx264 -s 1920x1080 outputvideo.mp4
+@echo off
+set /p url="Please enter the video link"
+yt-dlp -f "bv+ba/b" --write-thumbnail --convert-thumbnails png %url%
+pause
 ```
-#### 一些edge case
-- 如果你推直播窗太长，油管还没来得及转换hls为mp4，youtube-dl会自动采用ffmpeg下m3u8  
-油管hls转mp4速度和直播时长成反比例关系，确信。如果没装好ffmpeg的话需要用 --ffmpeg-location指定位置，而且ffmpeg的原理是先抓取碎片再整合~~很慢……~~
+- 需要剪取的话依旧可以使用ffmpeg或者losslesscut
 
 ## 实时录制油管直播
 ### streamlink
