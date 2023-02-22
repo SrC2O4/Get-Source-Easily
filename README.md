@@ -14,6 +14,10 @@ set /p url="Please enter the video link"
 yt-dlp -f "bv+ba/b" --write-thumbnail --convert-thumbnails png %url%
 pause
 ```
+- 下载264格式
+```DOS
+yt-dlp -f "(bv*[vcodec~='^((he|a)vc|h26[45])']+ba) / (bv*+ba/b)" %url%
+```
 - 需要剪取的话依旧可以使用ffmpeg或者losslesscut
 
 ## 实时录制油管直播
